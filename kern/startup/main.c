@@ -50,7 +50,7 @@
 #include <test.h>
 #include <version.h>
 #include "autoconf.h"  // for pseudoconfig
-
+#include "opt-A0.h"
 
 /*
  * These two pieces of data are maintained by the makefiles and build system.
@@ -101,7 +101,10 @@ boot(void)
 	kprintf("%s", harvard_copyright);
 	kprintf("\n");
 
-	kprintf("Welcome Peter! How are you today? %s (%s #%d)\n", 
+	#if OPT_A0
+		hello();
+	#endif /* OPT_A0 */
+	kprintf("Welcome Peter! How are you today? System Version %s (%s #%d)\n", 
 		GROUP_VERSION, buildconfig, buildversion);
 	kprintf("\n");
 
