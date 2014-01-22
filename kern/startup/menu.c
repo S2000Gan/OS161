@@ -457,6 +457,7 @@ static const char *testmenu[] = {
 	"[tt1] Thread test 1                 ",
 	"[tt2] Thread test 2                 ",
 	"[tt3] Thread test 3                 ",
+	"[pt]  Print Test                    ",
 #if OPT_NET
 	"[net] Network test                  ",
 #endif
@@ -527,7 +528,6 @@ static struct {
 	{ "help",	cmd_mainmenu },
 	{ "?o",		cmd_opsmenu },
 	{ "?t",		cmd_testmenu },
-
 	/* operations */
 	{ "s",		cmd_shell },
 	{ "p",		cmd_prog },
@@ -559,6 +559,7 @@ static struct {
 	{ "bt",		bitmaptest },
 	{ "km1",	malloctest },
 	{ "km2",	mallocstress },
+	{ "pt", printtest },
 #if OPT_NET
 	{ "net",	nettest },
 #endif
